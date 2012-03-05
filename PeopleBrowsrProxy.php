@@ -6,12 +6,12 @@
 	
 	//accept the needed paramaters and format them into a usable string
 	$params = array();
-	foreach($_GET as $k => $v){
+	foreach($_POST as $k => $v){
 		if($k != 'method'){
 			$params[$k] = $v;
 		}
 	}		
 	
 	//execute and return the information
-	echo $PBObject->execute($_GET['method'], $params);
+	echo $PBObject->execute($_POST['method'], $params);
 ?>
